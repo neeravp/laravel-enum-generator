@@ -6,9 +6,9 @@ For when there is a need to generate enum from config values provided in a confi
 Usable but not tested for all edge cases
 
 ```php
-use \Studeo\Support\Enumm;
+use \Studeo\Support\EnumGenerator;
 
-Enumm::make(
+EnumGenerator::make(
     name: 'CardType',
     values: [
       'icon' => 'Icon Card',
@@ -41,7 +41,7 @@ enum CardType: string
 ```
 
 ```php
-Enumm::make(name: 'CardType', values:['icon', 'text']);
+EnumGenerator::make(name: 'CardType', values:['icon', 'text']);
 ```
 
 Will generate: _in directory/path_ `app/Enums`.
@@ -61,7 +61,7 @@ enum CardType
 ```
 
 ```php
-Enumm::make('PostStatus', ['draft' => 1, 'pulished' => 2])
+EnumGenerator::make('PostStatus', ['draft' => 1, 'pulished' => 2])
     ->namespace('Studeo\Cms\Enums')
     ->path(Cms::rootPath('src/Enums'));
 ```
@@ -83,11 +83,11 @@ enum PostStatus: int
 Will throw an exception if the keys of array are non-sequential integers or starts with a number or contains special (disallowed) characters
 
 ```php
-use \Studeo\Support\Enumm;
+use \Studeo\Support\EnumGenerator;
 
 $values = [1 => 'icon', 'Two#' => 'text'];
 
-Enumm::make(name: 'Dummy', values:$values)
+EnumGenerator::make(name: 'Dummy', values:$values)
     ->namespace('Studeo\Cms\Enums')
     ->path(Cms::rootPath('src/Enums'));
 ```

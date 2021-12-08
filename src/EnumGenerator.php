@@ -5,7 +5,7 @@ namespace Studeo\Support;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
-class Enumm
+class EnumGenerator
 {
     public function __construct(
         public string $name,
