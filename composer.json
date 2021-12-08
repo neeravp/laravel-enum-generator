@@ -1,0 +1,19 @@
+{
+    "name": "neeravp/laravel-enum-generator",
+    "description": "A simple class to generate enum class from an array,",
+    "require": {
+        "illuminate/support": "^8.75"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Studeo\\Support\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "neeravp",
+            "email": "me@neerav.dev"
+        }
+    ]
+}
