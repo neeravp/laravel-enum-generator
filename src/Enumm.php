@@ -35,7 +35,7 @@ class Enumm
         $static = new static(
             name:$name,
             values:$values,
-            namespace: app()->getNamespace(),
+            namespace: rtrim(app()->getNamespace(), '\\'),
             path: app_path('Enums'),
             interface: $interface,
             type: null
@@ -168,7 +168,7 @@ class Enumm
      */
     private static function hasValidKeys(array $values): bool
     {
-        var_dump('hasValidKeys');
+        // var_dump('hasValidKeys');
         $isValid = true;
         $keys = array_keys($values);
 
